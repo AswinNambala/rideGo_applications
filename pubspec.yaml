@@ -1,0 +1,17 @@
+name: ridego_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.13.5
+
+workspace:
+  - apps/*
+  - packages/*
+
+dev_dependencies:
+  melos: ^7.0.0
+
+melos:
+  scripts:
+    analyze: melos exec -- flutter analyze
+    test: melos exec -- flutter test
