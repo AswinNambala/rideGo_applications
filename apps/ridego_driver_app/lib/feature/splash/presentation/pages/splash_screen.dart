@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_driver_app/core/theme/app_text_style.dart';
 import 'package:ridego_driver_app/feature/onboarding/presentation/onboarding_flow_page.dart';
 
 class SplashScreen extends StatefulWidget {
