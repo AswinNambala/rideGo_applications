@@ -5,8 +5,9 @@ environment:
   sdk: ^3.13.5
 
 workspace:
-  - apps/*
-  - packages/*
+  - apps/ridego_app
+  - apps/ridego_driver_app
+  - packages/ridego_core
 
 dev_dependencies:
   melos: ^7.0.0
