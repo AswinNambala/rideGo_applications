@@ -13,15 +13,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // loading();
+    loading();
   }
 
   void loading() async {
     await Future.delayed(Duration(seconds: 2));
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(builder: (ctx) => const BookARide()),
-    // );
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (ctx) => const BookARide()),
+    );
   }
 
   @override

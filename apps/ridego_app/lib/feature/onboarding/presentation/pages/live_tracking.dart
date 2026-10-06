@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_app/feature/onboarding/presentation/pages/live_tracking.dart';
+import 'package:ridego_app/feature/onboarding/presentation/pages/safety_and_rating.dart';
 import 'package:ridego_app/feature/onboarding/presentation/widgets/grahpic_container.dart';
 import 'package:ridego_core/core/theme/app_text_style.dart';
 
-class BookARide extends StatelessWidget {
-  const BookARide({super.key});
+class LiveTracking extends StatelessWidget {
+  const LiveTracking({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +23,17 @@ class BookARide extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GrahpicContainer(screenIcons: Icons.route),
+              GrahpicContainer(
+                screenIcons: Icons.radar_rounded,
+              ),
               const SizedBox(height: 40),
               Text(
-                'Book a ride in seconds',
+                'Track your driver live',
                 style: AppTextStyles.onboardingheadline,
               ),
               const SizedBox(height: 5),
               Text(
-                'Set your destination, compare ride option and get moving with just a few taps.',
+                'Set your driver approach in real time, with clear arrival updates every step of the way.',
                 style: AppTextStyles.body,
               ),
               const SizedBox(height: 20),
@@ -39,20 +41,21 @@ class BookARide extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 28,
+                    width: 8,
                     height: 8,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFD600),
-                      borderRadius: BorderRadius.circular(4),
+                      color: const Color(0xFF333333),
+                      shape: BoxShape.circle,
+                     
                     ),
                   ),
                   const SizedBox(width: 8),
                   Container(
-                    width: 8,
+                    width: 28,
                     height: 8,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF333333),
-                      shape: BoxShape.circle,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFD600),
+                      borderRadius: BorderRadius.circular(4),
                     ),
                   ),
                   const SizedBox(width: 8),
@@ -72,9 +75,9 @@ class BookARide extends StatelessWidget {
                 height: 56,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (ctx) => LiveTracking()),
+                      MaterialPageRoute(builder: (ctx) => SafetyAndRating()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

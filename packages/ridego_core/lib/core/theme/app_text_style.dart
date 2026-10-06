@@ -14,6 +14,11 @@ abstract final class AppTextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.surface,
   );
+   static const TextStyle onboardingheadline = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textPrimary,
+  );
 
   static const TextStyle title = TextStyle(
     fontSize: 20,

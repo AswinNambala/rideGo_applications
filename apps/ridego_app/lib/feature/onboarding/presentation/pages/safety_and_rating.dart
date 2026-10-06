@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_app/feature/onboarding/presentation/pages/live_tracking.dart';
 import 'package:ridego_app/feature/onboarding/presentation/widgets/grahpic_container.dart';
 import 'package:ridego_core/core/theme/app_text_style.dart';
 
-class BookARide extends StatelessWidget {
-  const BookARide({super.key});
+class SafetyAndRating extends StatelessWidget {
+  const SafetyAndRating({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +22,17 @@ class BookARide extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GrahpicContainer(screenIcons: Icons.route),
+              GrahpicContainer(
+                screenIcons: Icons.shield_outlined,
+              ),
               const SizedBox(height: 40),
               Text(
-                'Book a ride in seconds',
+                'Ride Safely, rate your trip',
                 style: AppTextStyles.onboardingheadline,
               ),
               const SizedBox(height: 5),
               Text(
-                'Set your destination, compare ride option and get moving with just a few taps.',
+                'Share your trip, access safety tools, and help make every RideGo journey better.',
                 style: AppTextStyles.body,
               ),
               const SizedBox(height: 20),
@@ -39,29 +40,30 @@ class BookARide extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 28,
+                    width: 8,
                     height: 8,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFD600),
+                      color: Color(0xFF333333),
+                      shape: BoxShape.circle,
+                      
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    width: 8,
+                    height: 8,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF333333),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    width: 28,
+                    height: 8,
+                    decoration:  BoxDecoration(
+                      color:  Color(0xFFFFD600),
                       borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Container(
-                    width: 8,
-                    height: 8,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF333333),
-                      shape: BoxShape.circle,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Container(
-                    width: 8,
-                    height: 8,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF333333),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ],
@@ -72,10 +74,7 @@ class BookARide extends StatelessWidget {
                 height: 56,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (ctx) => LiveTracking()),
-                    );
+                    // Next page logic
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFFD600),
@@ -89,7 +88,7 @@ class BookARide extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Next',
+                        'Get Started',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
