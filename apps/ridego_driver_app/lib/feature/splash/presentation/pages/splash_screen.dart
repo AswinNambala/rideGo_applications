@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_app/feature/onboarding/presentation/pages/book_a_ride.dart';
 import 'package:ridego_core/core/theme/app_text_style.dart';
+import 'package:ridego_driver_app/feature/onboarding/presentation/onboarding_flow_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const new({super.key});
@@ -21,14 +21,14 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
       // ignore: use_build_context_synchronously
       context,
-      MaterialPageRoute(builder: (ctx) => const BookARide()),
+      MaterialPageRoute(builder: (ctx) => const DriverOnboardingFlow()),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.orangeAccent,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,8 +44,15 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            Text('RideGo App', style: AppTextStyles.splashheadline),
-            Text('Your city, one smooth ride away.', style: AppTextStyles.body),
+            Text('RideGo Driver App', style: AppTextStyles.splashheadline),
+            Text(
+              'Own your time. Move your city.',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+              ),
+            ),
           ],
         ),
       ),
