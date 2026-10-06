@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_core/core/theme/app_text_style.dart';
+import 'package:ridego_driver_app/core/theme/app_text_style.dart';
 import 'package:ridego_driver_app/feature/onboarding/presentation/onboarding_flow_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -44,7 +44,14 @@ class _SplashScreenState extends State<SplashScreen> {
                 fit: BoxFit.contain,
               ),
             ),
-            Text('RideGo Driver App', style: AppTextStyles.splashheadline),
+            Text(
+              'RideGo Driver App',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
             Text(
               'Own your time. Move your city.',
               style: TextStyle(

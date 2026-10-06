@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ridego_core/core/theme/app_theme.dart';
-import 'package:ridego_core/ridego_core.dart';
+import 'package:ridego_driver_app/core/theme/app_theme.dart';
 import 'package:ridego_driver_app/feature/splash/presentation/pages/splash_screen.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark,
+      theme: AppTheme.darkTheme,
       home: SplashScreen(),
     );
   }
