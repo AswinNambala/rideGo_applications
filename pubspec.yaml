@@ -8,6 +8,7 @@ workspace:
   - apps/ridego_app
   - apps/ridego_driver_app
   - packages/ridego_core
+  - apps/ridego_admin
 
 dev_dependencies:
   melos: ^7.0.0

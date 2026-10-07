@@ -27,7 +27,7 @@ class AppTheme {
         titleTextStyle: AppTextStyles.headingMedium,
       ),
 
-      // Primary Button Theme (Yellow Action Buttons)[cite: 7]
+      // Primary Button Theme (Yellow Action Buttons)
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accentYellow,
@@ -35,13 +35,13 @@ class AppTheme {
           elevation: 0,
           minimumSize: const Size(double.infinity, 56),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(28), // Fully rounded pills[cite: 7]
+            borderRadius: BorderRadius.circular(28), 
           ),
           textStyle: AppTextStyles.buttonYellow,
         ),
       ),
 
-      // Secondary Text Buttons (e.g., Skip button)[cite: 7]
+      // Secondary Text Buttons 
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.textSecondary,
