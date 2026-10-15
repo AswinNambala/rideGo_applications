@@ -3,7 +3,6 @@ import 'package:ridego_app/core/theme/app_color.dart';
 
 /// Standardized typography scale following Material 3 guidelines for RideGo Rider[cite: 7].
 class AppTextStyles {
-  // Headings & Displays
   static const TextStyle displayLarge = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,
@@ -61,7 +60,7 @@ class AppTextStyles {
   static const TextStyle buttonYellow = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.bold,
-    color: Colors.black, // Dark text on yellow CTA buttons[cite: 7]
+    color: Colors.black,
   );
 
   static const TextStyle buttonDark = TextStyle(

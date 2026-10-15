@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ridego_app/core/theme/app_color.dart';
 import 'package:ridego_app/feature/onboarding/presentation/pages/rider_onboarding_flow.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: AppColors.accentYellow,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

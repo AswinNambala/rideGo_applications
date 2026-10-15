@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ridego_app/core/theme/app_color.dart';
 import 'package:ridego_app/core/theme/app_text_style.dart';
+import 'package:ridego_app/feature/auth/presentation/pages/login_screen.dart';
 import 'package:ridego_app/feature/onboarding/presentation/data/data_model.dart';
 import 'package:ridego_app/feature/onboarding/presentation/widgets/rider_page_view.dart';
 
@@ -18,20 +19,17 @@ class _RiderOnboardingScreenState extends State {
   final List _pages = const [
     RiderOnboardingData(
       title: 'Book a ride in seconds',
-      description:
-          'Set your destination, compare ride options, and get moving with just a few taps.',
+      description: 'Set your destination, compare ride options, and get moving with just a few taps.',
       type: RiderOnboardingType.book,
     ),
     RiderOnboardingData(
       title: 'Track your driver live',
-      description:
-          'See your driver approach in real time, with clear arrival updates every step of the way.',
+      description: 'See your driver approach in real time, with clear arrival updates every step of the way.',
       type: RiderOnboardingType.tracking,
     ),
     RiderOnboardingData(
       title: 'Ride safely, rate your trip',
-      description:
-          'Share your trip, access safety tools, and help make every RideGo journey better.',
+      description: 'Share your trip, access safety tools, and help make every RideGo journey better.',
       type: RiderOnboardingType.safety,
     ),
   ];
@@ -48,16 +46,17 @@ class _RiderOnboardingScreenState extends State {
           child: Column(
             children: [
               const SizedBox(height: 12),
-              
-              // Skip Button Top Bar
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    // Skip action
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (ctx) => LoginScreen()),
+                    );
                   },
                   child: Text(
-                    'Skip',
+                    'Skip To Login',
                     style: AppTextStyles.bodyLarge.copyWith(
                       color: AppColors.textSecondary,
                       fontWeight: FontWeight.w600,
@@ -110,7 +109,10 @@ class _RiderOnboardingScreenState extends State {
                 child: ElevatedButton(
                   onPressed: () {
                     if (isLastPage) {
-                      // Navigate to Login/Signup[cite: 7]
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (ctx) => LoginScreen()),
+                      );
                     } else {
                       _pageController.nextPage(
                         duration: const Duration(milliseconds: 300),
@@ -133,7 +135,11 @@ class _RiderOnboardingScreenState extends State {
                         style: AppTextStyles.buttonYellow,
                       ),
                       const SizedBox(width: 8),
-                      const Icon(Icons.arrow_forward, size: 20, color: Colors.black),
+                      const Icon(
+                        Icons.arrow_forward,
+                        size: 20,
+                        color: Colors.black,
+                      ),
                     ],
                   ),
                 ),
