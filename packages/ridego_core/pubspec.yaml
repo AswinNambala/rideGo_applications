@@ -1,7 +1,8 @@
 name: ridego_core
-description: "A new Flutter package project."
+description: Shared theme and core code for the rideGo apps.
 version: 0.0.1
-homepage:
+publish_to: none
+
 
 environment:
   sdk: ^3.13.5
