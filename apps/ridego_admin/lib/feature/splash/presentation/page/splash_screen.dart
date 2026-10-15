@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    loading();
+    // loading();
   }
 
   void loading() async {
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.blueAccent[700],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
